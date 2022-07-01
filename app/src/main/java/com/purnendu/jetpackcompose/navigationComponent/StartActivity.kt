@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 
 class StartActivity : ComponentActivity() {
 
+
+    //navigationComponent project starting from here
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

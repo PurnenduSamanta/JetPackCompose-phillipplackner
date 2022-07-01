@@ -1,5 +1,6 @@
 package com.purnendu.jetpackcompose
 
+import androidx.activity.ComponentActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -26,7 +27,7 @@ import androidx.navigation.compose.rememberNavController
 import kotlin.collections.List
 
 
-class BottomNavigationWithBadges : androidx.activity.ComponentActivity() {
+class BottomNavigationWithBadges :ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -24,6 +24,8 @@ import kotlin.math.sin
 
 class Timer : ComponentActivity() {
 
+
+    //Not completed yet
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

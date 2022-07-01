@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 
+//MeditationUI project starting from here
 class MeditationUi : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
