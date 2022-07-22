@@ -14,6 +14,13 @@
         android:theme="@style/Theme.JetPackCompose"
         tools:targetApi="31">
         <activity
+            android:name=".TestActivityXml"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true" >
+        </activity>
+
+
+        <activity
             android:name=".InstagramUIClone"
             android:exported="true"
             android:label="@string/app_name"

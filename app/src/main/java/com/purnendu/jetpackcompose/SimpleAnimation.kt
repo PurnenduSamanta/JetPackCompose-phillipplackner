@@ -6,8 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.getValue
@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
@@ -28,14 +29,13 @@ class SimpleAnimation : ComponentActivity() {
         setContent {
 
             var sizeState by remember {
-                mutableStateOf(200.dp)
+                mutableStateOf(100.dp)
             }
 
             val size by animateDpAsState(
                 targetValue = sizeState,
                 animationSpec = tween(
-                    durationMillis = 3000,
-                    delayMillis = 300,
+                    durationMillis = 400,
                     easing = LinearEasing
                 )
                 //animationSpec = spring(Spring.DampingRatioMediumBouncy)
@@ -62,19 +62,26 @@ class SimpleAnimation : ComponentActivity() {
                     )
                 )
             )
-            Box(
-                modifier = Modifier
-                    .size(size)
-                    .background(color),
-                contentAlignment = Alignment.Center
-            ) {
 
-                Button(onClick = { sizeState += 50.dp }) {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
 
-                    Text(text = "Increase Size")
+                Box(
+                    modifier = Modifier
+                        .height(100.dp)
+                        .width(size)
+                        //.size(size)
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(color),
+                    contentAlignment = Alignment.Center
+                ) {
+
+                    Button(onClick = { sizeState += 50.dp }) {
+
+                        Text(text = "Increase Size")
+
+                    }
 
                 }
-
             }
 
 

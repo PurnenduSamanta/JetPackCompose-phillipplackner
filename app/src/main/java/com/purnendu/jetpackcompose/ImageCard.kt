@@ -94,7 +94,7 @@ fun ImageCard(painter: Painter, title: String, content: String, modifier: Modifi
                             withStyle(
                                 style = SpanStyle(
                                     color = Color.Green,
-                                    fontSize = 30.sp
+                                    fontSize = 30.sp,
                                 ),
                             )
                             {
